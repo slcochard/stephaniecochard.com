@@ -1,0 +1,136 @@
+[class*="-box"] {
+	font-size: x-large;
+	border-width: .5em 0px;
+	border-style: solid;
+}
+[class^="col-"] {
+	line-height: 1.8em;
+}
+.squares {
+	background: url("squares.png") no-repeat left center;
+	display: inline-block;
+	width: 100px;
+}
+h1 {
+	margin-left:-15px;
+	font-size: 48px;
+}
+h4 {
+	font-size: 16px;
+}
+h5 {
+	font-size: x-large;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+}
+.copy-text {
+	font-family: 'Lato', sans-serif;
+}
+.heading-text {
+	font-family: 'Roboto Slab', serif;
+}
+.footer-text {
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+.move-up {
+	margin-top: -10px;
+	margin-bottom: 25px;
+}
+.move-right {
+	margin-left: 40px;
+}
+.gray-box {
+	background-color: rgb(153, 153, 153);
+	border-color: rgb(153, 153, 153);
+	color: white;
+}
+.lt-gray-box {
+	background-color: rgb(232,232,232);
+	border-color: rgb(232,232,232);
+}
+.black-text {
+	color: rgb(102, 102, 102);
+}
+.gray-box.light {
+	background-color: rgb(192, 192, 192);
+	border-color: rgb(192, 192, 192);
+}
+.green-box {
+	background-color: rgb(147, 204, 130);
+	border-color: rgb(147, 204, 130);
+	color: white;
+}
+.green-text {
+	color: rgb(43, 182, 115);
+}
+.blue-box {
+	background-color: rgb(132, 195, 191);
+	border-color: rgb(132, 195, 191);
+	color: white;
+}
+.salmon-box {
+	background-color: rgb(245, 132, 102);
+	border-color: rgb(245, 132, 102);
+	color: white;
+}
+.container .row {
+	padding-bottom: 15px;
+}
+.container .row .row .row {
+	padding-bottom: 0px;
+}
+.panel {
+	border: none;
+}
+.panel-group {
+	margin-bottom: 0px;
+}
+.panel-group .panel {
+	overflow: visible;
+}
+.medium-text {
+	font-size: medium;
+}
+.smaller-text {
+	font-size: small;
+	line-height: 3.3em;
+}
+.footer {
+	border-width: 0px;
+}
+a, a:hover {
+	color: white;
+}
+.hitbox:hover {
+	cursor: pointer;
+}
+.black-text a, .black-text a:hover, .black-text * a, .black-text * a:hover {
+	color: rgb(102, 102, 102);
+}
+ul {
+	margin-top: 1em;
+}
+ul li ul {
+	margin-top: 0px;
+}
+ul[class*="-list"] li {
+	list-style: none;
+	padding-left: 25px;
+	display: block;
+	font-size: small;
+}
+.blue-list li {
+	background: url('blue-bullet.png') no-repeat left .5em;
+}
+.green-list li {
+	background: url('green-bullet.png') no-repeat left .5em;
+}
+.salmon-list li {
+	background: url('salmon-bullet.png') no-repeat left .5em;
+}
+.gray-list li {
+	background: url('gray-bullet.png') no-repeat left .5em;
+}
+.headline {
+	font-style: italic;
+}
