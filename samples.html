@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Stephanie Cochard</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+		<!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:600,300%7CPT+Sans+Narrow" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="./style.css" type="text/css">
+
+		<!-- jquery -->
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.hitbox').click(function(e){
+					if(e.target.tagName !== 'A'){
+						//stop propagation of THIS event...
+						e.preventDefault();
+						e.stopPropagation();
+						//and trigger a click on the acutal a tag
+						$($(this).find('a')[0]).trigger('click');
+						return false;
+					}
+				});
+				$('.collapse[data-href]').each(function(idx,obj){
+					//preload everything
+					(function($obj){
+						if(/\.json$/.test($obj.attr('data-href'))){
+							$.getJSON($obj.attr('data-href')).done(function(data){
+								$obj.html(data.html);
+							}).fail(function(data){
+								$obj.html('');
+							});
+						} else if(/(\.htm$)|(\.html$)|(\.txt$)/.test($obj.attr('data-href'))){
+							$.get($obj.attr('data-href')).done(function(data){
+								$obj.html(data);
+							}).fail(function(data){
+								$obj.html('');
+							});
+						}
+					}($(obj)));
+				});
+				function fixLinks(){
+					$('a[data-href]').each(function(idx,obj){
+						$(obj).attr('href',$(obj).attr('data-href'));
+					});
+				}
+				$(document).ajaxComplete(fixLinks);
+			});
+		</script>
+
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-51741056-1', 'stephaniecochard.com');
+		ga('send', 'pageview');
+		</script>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="container">
+				<div class="row">
+					<br>
+					<br>
+				</div>
+				<div class="row">
+					<div class="col-sm-12" itemscope itemtype="http://data-vocabulary.org/Person">
+						<div class="row">
+							<div class="col-sm-8">
+								<h1 class="copy-text black-text">
+									<span itemprop="name">Stephanie Cochard</span> &nbsp;<span itemprop="logo" class="squares">&nbsp;</span>
+								</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-sm-offset-2">
+								<h4 class="green-text heading-text move-up move-right">
+									<span itemprop="role">WRITE. MARKET. DESIGN.</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="row blue-box medium-text">
+                                    <p class="padding-left">
+                                        Skilled at applying excellent written and verbal skills to advance brand and marketing strategies for innovative companies through results-driven communications programs.
+                                    </p>
+								</div>
+
+								<div class="row panel-collapse collapse in" id="written">
+                                    <div class="panel-body lt-gray-box light black-text copy-text medium-text">
+                                        <ul class="blue-list">
+                                            <li>
+                                            Composed informational consumer-focused articles for target audiences:
+                                            <ul class="gray-list">
+                                                <li>
+                                                <a target="_blank" href="SunTreatment.html" data-href="frame.html?file=SunTreatment.html&amp;title=Learn+How+to+Treat+the+Sun+Well">Learn How to Treat the Sun Well</a>
+                                                </li>
+                                                <li>
+                                                <a target="_blank" href="OrganizationTips.html" data-href="frame.html?file=OrganizationTips.html&amp;title=Stay+Organized,+Stick+to+Your+Resolutions">Stay Organized, Stick to Your Resolutions</a>
+                                                </li>
+                                                <li>
+                                                <a target="_blank" href="DegreeMistake.html" data-href="frame.html?file=DegreeMistake.html&amp;title=Is+Your+Major+Degree+a+Major+Mistake%3F">Is Your Major Degree a Major Mistake?</a>
+                                                </li>
+                                                <li> 
+                                                <a target="_blank" href="TeenCareerAdvice.html" data-href="frame.html?file=TeenCareerAdvice.html&amp;title=Teen+Career+Advice:+It&rsquo;s+Never+Too+Early">Teen Career Advice: It&rsquo;s Never Too Early</a>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                            <li>
+                                            Written press releases to maximize company exposure and facilitate corporate announcements to media outlets 
+                                            <ul class="gray-list">
+                                                <li class="headline">
+                                                <a target="_blank" href="WebStudioLivePressRelease.html" data-href="frame.html?file=WebStudioLivePressRelease.html&amp;title=Web+Studio+Live+Launches+Complete+Web+Design+in+a+Browser">Web Studio Live Launches Complete Web Design in a Browser</a>
+                                                </li>
+                                                <li class="headline">
+                                                <a target="_blank" href="CharityGolfClassicToBenefitWoundedVeterans.html" data-href="frame.html?file=CharityGolfClassicToBenefitWoundedVeterans.html&amp;title=Charity+Golf+Classic+to+Benefit+Wounded+Veterans">Charity Golf Classic to Benefit Wounded Veterans</a>
+                                                </li>
+                                                <li class="headline">
+                                                <a target="_blank" href="MortgageServicerReceivesGinnieMaeApproval.html" data-href="frame.html?file=MortgageServicerReceivesGinnieMaeApproval.html&amp;title=Mortgage+Servicer+Receives+Ginnie+Mae+Approval">Mortgage Servicer Receives Ginnie Mae Approval</a>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                            <li>
+                                            Delivered clear and consistent brand message to specific audience by producing written content for investor and consumer-focused websites 
+                                            <ul class="gray-list">
+                                                <li>
+                                                <a href="http://www.carringtonhc.com" target="_blank">Financial organization website content</a>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                            <li>
+                                            Enhanced corporate recruiting efforts by creating advertisements, job descriptions and social media messaging to promote brand growth 
+                                            <ul class="gray-list">
+                                                <li>
+                                                <a target="_blank" href="PrintAdJobPosting.html" data-href="frame.html?file=PrintAdJobPosting.html&amp;title=Print+Ad">Print Ad</a>
+                                                </li>
+                                                <li>
+                                                <a target="_blank" href="OnlineJobPosting.html" data-href="frame.html?file=OnlineJobPosting.html&amp;title=Online+Job+Postings">Online Job Postings</a>
+                                                </li>
+                                                <li>
+                                                <a href="https://www.linkedin.com/company/carrington-mortgage-services" target="_blank">Company LinkedIn</a>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                            <li>
+                                            Written executive bios and profile features to highlight key individuals
+                                            <ul class="gray-list">
+                                                <li>
+                                                <a href="http://carringtoncf.org/vetswesupport/" target="_blank">Features of severely wounded military veterans</a>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                            <li>
+                                            Established product identity through naming of property management software 
+                                            <ul class="gray-list">
+                                                <li>
+                                                <a href="http://rentpointe.com/" target="_blank">RentPointe, software as a service (SaaS)</a>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                            <li>
+                                            Spearheaded internal communications campaigns geared toward promoting employee wellness, career training, and charitable programs 
+                                            <ul class="gray-list">
+                                                <li>
+                                                <a target="_blank" href="LearningIsInBloom/LearningIsInBloom.html" data-href="frame.html?file=LearningIsInBloom/LearningIsInBloom.html&amp;title=Promotion+of+Education+Portal+e-learning+software+system">Promotion of Education Portal e-learning software system</a>
+                                                </li>
+                                                <li>
+                                                <a target="_blank" href="NoPantsLikeJeans.html" data-href="frame.html?file=NoPantsLikeJeans.html&amp;title=Promotion+of+casual+dress+charity+fundraising+campaign">Promotion of casual dress charity fundraising campaign</a>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                            <li>
+                                            Produced promotional copy for charity events to increase awareness, volunteerism and fundraising efforts, resulting in over $4 million raised for a variety of non-profit organizations since 2011
+                                            <ul class="gray-list">
+                                                <li>
+                                                Charity Golf Tournament magazine 
+                                                </li>
+                                                <li>
+                                                <a href="http://www.carringtoncf.org/" target="_blank">Marketing content for charitable organization</a>
+                                                </li>
+                                                <li>
+                                                <a href="http://www.carringtoncf.org/golf" target="_blank">Marketing content for charity golf tournament</a>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                            <li>
+                                            Employed creative writing skills to create product descriptions and advertisements for Etsy handmade fashion accessories
+                                            <ul class="gray-list">
+                                                <li>
+                                                <a target="_blank" href="ProductDescriptions.pdf" data-href="frame.html?file=ProductDescriptions.pdf&amp;title=Product+descriptions,+Live+in+the+Loop+Shop">Product descriptions, Live in the Loop Shop</a>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="row green-box medium-text">
+                                    <p class="padding-left">
+                                        Produced creative graphics and original artwork using Adobe Illustrator and InDesign software for websites, email newsletters, flyers, posters, event signage, invitations, cards and prints
+                                    </p>
+								</div>
+								<div class="row panel-collapse collapse in" id="graphic">
+                                    <div class="panel-body lt-gray-box light black-text copy-text medium-text">
+                                    <ul class="green-list">
+                                    <li>
+                                    <a target="_blank" href="CorporateRecruitingFlyers.html" data-href="frame.html?file=CorporateRecruitingFlyers.html&amp;title=Corporate+Recruiting+Flyers">Corporate recruiting flyers</a>
+                                    </li>
+                                    <li>
+                                    Employee campaigns
+                                    <ul class="gray-list">
+                                    <li><a target="_blank" href="EmployeeFundraiser.html" data-href="frame.html?file=EmployeeFundraiser.html&amp;title=Employee+Fundraiser">Sample 1: Employee Fundraiser</a></li>
+                                    <li><a target="_blank" href="WellnessCampaign.html" data-href="frame.html?file=WellnessCampaign.html&amp;title=Wellness+Campaign">Sample 2: Wellness Campaign</a></li>
+                                    </ul>
+                                    </li>
+                                    <li>
+                                    Infographics 
+                                    <ul class="gray-list">
+                                    <li>
+                                    <a target="_blank" href="BreastCancerAwareness.html" data-href="frame.html?file=BreastCancerAwareness.html&amp;title=Breast+Cancer+Awareness">Breast Cancer Awareness</a>
+                                    </li>
+                                    <li>
+                                    <a target="_blank" href="HealthAndWellness.html" data-href="frame.html?file=HealthAndWellness.html&amp;title=Health+%26+Wellness">Health &amp; Wellness</a>
+                                    </li>
+                                    <li>
+                                    <a target="_blank" href="SoupKitchenFacts.html" data-href="frame.html?file=SoupKitchenFacts.html&amp;title=Soup+Kitchen+Facts">Soup Kitchen Facts</a>
+                                    </li>
+                                    </ul>
+                                    </li>
+                                    <li>
+                                    <a target="_blank" href="http://carringtoncf.org/golf">Contributed to artwork and design direction for non-profit website</a>
+                                    </li>
+                                    <li>
+                                    <a target="_blank" href="http://stephanieandgreg.us">Created original layout and graphics for wedding website</a>
+                                    </li>
+                                    <li>
+                                    <a target="_blank" href="http://stephaniecochard.com">Created original layout and graphics for personal portfolio website</a>
+                                    </li>
+                                    <li> 
+                                    <a target="_blank" href="Speckked.pdf" data-href="frame.html?file=Speckked.pdf&amp;title=Web+Application+Website+Layout+And+Graphics">Created original layout and graphics for web application website</a>
+                                    </li>
+                                    <li>
+                                    <a target="_blank" href="WallArt.html" data-href="frame.html?file=WallArt.html&amp;title=Wall+Art+%26+Prints">Wall art &amp; prints</a>
+                                    </li>
+                                    <li>
+                                    <a target="_blank" href="WeddingInvitations.html" data-href="frame.html?file=WeddingInvitations.html&amp;title=Wedding+Invitations">Wedding invitations</a>
+                                    </li>
+                                    <li>
+                                    <a target="_blank" href="CardsAndNotes.html" data-href="frame.html?file=CardsAndNotes.html&amp;title=Cards+%26+Notes">Cards &amp; Notes</a>
+                                    </li>
+                                    </ul>
+                                    </div>
+                                    
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="row">
+							<div class="col-sm-9 col-sm-offset-3 gray-box text-center">
+								<div class="row">
+									<h5 class="col-sm-12 copy-text">
+										<a href="./samples.html">SAMPLES</a>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-9 col-sm-offset-3 gray-box text-center">
+								<div class="row">
+									<h5 class="col-sm-12 copy-text">
+										<a href="./skills.html">SKILLS</a>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-9 col-sm-offset-3 gray-box text-center">
+								<div class="row">
+									<h5 class="col-sm-12 copy-text">
+										<a href="./contact.html">SAY HI</a>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-9 col-sm-offset-3 gray-box text-center">
+								<div class="row">
+									<h5 class="col-sm-12 copy-text">
+										<a href="./surprise.html">SURPRISE</a>
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="container">
+				<div class="footer row gray-box light">
+					<div class="col-sm-12 text-center heading-text smaller-text">
+						<small>Copyright &copy; 2013-2015</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

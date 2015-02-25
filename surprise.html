@@ -20,45 +20,6 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$('.hitbox').click(function(e){
-					if(e.target.tagName !== 'A'){
-						//stop propagation of THIS event...
-						e.preventDefault();
-						e.stopPropagation();
-						//and trigger a click on the acutal a tag
-						$($(this).find('a')[0]).trigger('click');
-						return false;
-					}
-				});
-				$('.collapse[data-href]').each(function(idx,obj){
-					//preload everything
-					(function($obj){
-						if(/\.json$/.test($obj.attr('data-href'))){
-							$.getJSON($obj.attr('data-href')).done(function(data){
-								$obj.html(data.html);
-							}).fail(function(data){
-								$obj.html('');
-							});
-						} else if(/(\.htm$)|(\.html$)|(\.txt$)/.test($obj.attr('data-href'))){
-							$.get($obj.attr('data-href')).done(function(data){
-								$obj.html(data);
-							}).fail(function(data){
-								$obj.html('');
-							});
-						}
-					}($(obj)));
-				});
-				function fixLinks(){
-					$('a[data-href]').each(function(idx,obj){
-						$(obj).attr('href',$(obj).attr('data-href'));
-					});
-				}
-				$(document).ajaxComplete(fixLinks);
-			});
-		</script>
-
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -103,32 +64,41 @@
 							<div class="col-sm-12">
                                 <div class="row">
 									<div class="black-text copy-text medium-text">
-                                        <p><strong>Creative marketing professional focused on applying excellent written and verbal skills to advance brand and marketing strategies for innovative companies through results-driven communications programs.</strong></p>
-                                        <h3 class="salmon-text">CORE STRENGTHS</h3>
-										<ul>
-											<li>
-											Produce and edit copy that excites call to action and translates industry-specific ideas into key messaging that speaks to a larger audience
-											</li>
-											<li>
-											Experienced in fast-paced, deadline-driven corporate environments, with a tendency to take initiative through self-started projects and lead by example
-											</li>
-											<li>
-											Demonstrated ability to develop and manage proactive communications programs that maximize brand awareness and increase market presence
-											</li>
-										</ul>
-                                        <h3 class="salmon-text">SKILLS</h3>
-                                        <p>
-                                        Microsoft Word, Excel, PowerPoint, Outlook, OneNote, SharePoint,
-                                        <br>
-                                        Adobe Illustrator, InDesign, Photoshop, Acrobat X Pro,
-                                        <br>
-                                        Content Management Systems, Customer Relationship Systems, Press Distribution Services
-                                        </p>
+                                        <h2 class="green-text">Wow, you're pretty adventurous!</h2>
+                                        <h3>As a reward, here's a little bit about me (best prize ever, obviously)</h3>
+                                        <div class="col-sm-2" style="margin-right:-25px;">
+                                            <img src="stephanie_cochard.jpg">
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <ul>
+                                                <li>
+                                                I'm a former Anteater. Go UC Irvine! Zot zot?
+                                                </li>
+                                                <li>
+                                                Will write for pizza. And Netflix.
+                                                </li>
+                                            </ul>
+                                            ---&gt; Yes, this is my good side. My jolly, good side.
+                                            <ul>
+                                                <li>
+                                                Is it sunny out? I'm playing Smashball on the beach. (And probably losing).
+                                                </li>
+                                                <li>
+                                                I enjoy sword fighting with pencils. Currently seeking opponents.
+                                                </li>
+                                                <li>
+                                                A shrimp's heart is in its head. Not about me, but still interesting.
+                                                </li>
+                                                <li>
+                                                I am co-creator of the health companion app <strong><a href="https://fitbeast.io" target="_blank">Fitbeast</a></strong> available on the <strong><a href="https://play.google.com/store/apps/details?id=io.fitbeast.android.app.FitbeastApplication" target="_blank">Google Play Store</a></strong>.
+                                            </ul>
+                                        </div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+
 
 					<div class="col-sm-3">
 						<div class="row">
@@ -168,7 +138,6 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</div>

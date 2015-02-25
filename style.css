@@ -24,10 +24,10 @@ h5 {
 	-webkit-margin-after: 0px;
 }
 .copy-text {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 .heading-text {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Raleway', sans-serif;
 }
 .footer-text {
 	font-family: 'PT Sans Narrow', sans-serif;
@@ -38,6 +38,9 @@ h5 {
 }
 .move-right {
 	margin-left: 40px;
+}
+.padding-left {
+    padding-left: 25px;
 }
 .gray-box {
 	background-color: rgb(153, 153, 153);
@@ -73,6 +76,26 @@ h5 {
 	border-color: rgb(245, 132, 102);
 	color: white;
 }
+.salmon-text {
+	color: rgb(245, 132, 102);
+}
+.orange-box {
+	background-color: rgb(251, 176, 63);
+	border-color: rgb(251, 176, 63);
+	color: white;
+}
+.brown-box, .btn-brown {
+    background-color: rgb(115, 75, 39);
+    border-color: rgb(115, 75, 39);
+    border-radius: 0px;
+    color: white;
+    padding: 2px 32px;
+    text-align: center;
+    vertical-align: middle;
+}
+.btn-chester {
+    margin-left:15px;
+}
 .container .row {
 	padding-bottom: 15px;
 }
@@ -87,6 +110,18 @@ h5 {
 }
 .panel-group .panel {
 	overflow: visible;
+}
+.large-text {
+    font-size: large;
+}
+.x-large-text {
+    font-size: x-large;
+}
+.xx-large-text {
+    font-size: xx-large;
+}
+.col-sm-offset-1-2 {
+    margin-left: 4.16666%;
 }
 .medium-text {
 	font-size: medium;
@@ -133,4 +168,7 @@ ul[class*="-list"] li {
 }
 .headline {
 	font-style: italic;
+}
+img.border {
+    border:2px solid black;
 }
