@@ -20,9 +20,14 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://feedback.stephaniecochard.com/js.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
+        var s = document.createElement('script');
+        m = document.getElementsByTagName('script')[0];
+        s.type = "text/javascript";
+        s.src = "https://feedback.stephaniecochard.com/js.js?date="+Date.now();
+        m.parentNode.insertBefore(s,m);
+
 				$('.hitbox').click(function(e){
 					if(e.target.tagName !== 'A'){
 						//stop propagation of THIS event...
