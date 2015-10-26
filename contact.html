@@ -20,6 +20,7 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://feedback.stephaniecochard.com/js.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('.hitbox').click(function(e){
@@ -88,7 +89,9 @@
 								<div class="row" id="contact">
 									<div class="lt-gray-box light black-text copy-text medium-text">
                                         <h4 style="margin-left:10px;">Contact me for a copy of my resume or just drop me a note.</h4>
-										<form action="https://stephanieandgreg.us/send-email" method="POST" role="form" class="form-horizontal">
+										<form action="https://feedback.stephaniecochard.com/feedback" method="POST" role="form" class="form-horizontal">
+                      <input type="hidden" name="success" value="https://stephaniecochard.com/contact.html#success" />
+                      <input type="hidden" name="fail" value="https://stephaniecochard.com/contact.html#fail" />
 											<div class="form-group">
 												<label class="col-sm-2 control-label" for="email">Email Address:</label>
 												<div class="col-sm-3">
@@ -113,6 +116,21 @@
                                                 </div>
                                             </div>
 										</form>
+                    <div class="hidden alert alert-success alert-dismissible" id="success" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      Thanks for the message!
+                    </div>
+                    <div class="hidden alert alert-danger alert-dismissible" id="fail" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      Error, something went wrong. Please try again.
+                    </div>
+                    <script type="text/javascript">
+                      $(document).ready(function(){
+                        if(window.location.hash){
+                          $(window.location.hash).removeClass('hidden');
+                        }
+                      });
+                    </script>
 									</div>
 								</div>
 							</div>
