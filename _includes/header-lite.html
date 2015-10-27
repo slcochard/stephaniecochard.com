@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Stephanie Cochard</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+		<!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:600,300%7CPT+Sans+Narrow" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="./style.css" type="text/css">
+
+		<!-- jquery -->
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.hitbox').click(function(e){
+					if(e.target.tagName !== 'A'){
+						//stop propagation of THIS event...
+						e.preventDefault();
+						e.stopPropagation();
+						//and trigger a click on the acutal a tag
+						$($(this).find('a')[0]).trigger('click');
+						return false;
+					}
+				});
+				$('.collapse[data-href]').each(function(idx,obj){
+					//preload everything
+					(function($obj){
+						if(/\.json$/.test($obj.attr('data-href'))){
+							$.getJSON($obj.attr('data-href')).done(function(data){
+								$obj.html(data.html);
+							}).fail(function(data){
+								$obj.html('');
+							});
+						} else if(/(\.htm$)|(\.html$)|(\.txt$)/.test($obj.attr('data-href'))){
+							$.get($obj.attr('data-href')).done(function(data){
+								$obj.html(data);
+							}).fail(function(data){
+								$obj.html('');
+							});
+						}
+					}($(obj)));
+				});
+				function fixLinks(){
+					$('a[data-href]').each(function(idx,obj){
+						$(obj).attr('href',$(obj).attr('data-href'));
+					});
+				}
+				$(document).ajaxComplete(fixLinks);
+			});
+		</script>
+
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-51741056-1', 'stephaniecochard.com');
+		ga('send', 'pageview');
+		</script>
+
+	</head>
+	<body>

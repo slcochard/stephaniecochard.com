@@ -1,210 +1,100 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Stephanie Cochard</title>
+---
 
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+---
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+{% include header.html %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 panel-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="black-text copy-text medium-text">
+              <p><strong>Creative marketing professional focused on applying excellent written and verbal skills to advance brand and marketing strategies for innovative companies through results-driven communications programs.</strong></p>
+              <h3 class="salmon-text">CORE STRENGTHS</h3>
+              <ul>
+                <li>
+                Produce and edit copy that excites call to action and translates industry-specific ideas into key messaging that speaks to a larger audience
+                </li>
+                <li>
+                Experienced in fast-paced, deadline-driven corporate environments, with a tendency to take initiative through self-started projects and lead by example
+                </li>
+                <li>
+                Demonstrated ability to develop and manage proactive communications programs that maximize brand awareness and increase market presence
+                </li>
+                <li>
+                Adept at recognizing how design and copy work together
+                </li>
+                <li>
+                Able to quickly respond and adapt to feedback, edits, and changes of scope
+                </li>
+                <li>
+                Skilled at contributing content for:
+                <ul>
+                  <li>
+                  Websites
+                  </li>
+                  <li>
+                  Blogs
+                  </li>
+                  <li>
+                  Collateral
+                  </li>
+                  <li>
+                  Emails
+                  </li>
+                  <li>
+                  Brand &amp; Mission Statements
+                  </li>
+                  <li>
+                  Trade Shows
+                  </li>
+                  <li>
+                  Product UI/UX
+                  </li>
+                  <li>
+                  Social Media
+                  </li>
+                  <li>
+                  Press Releases
+                  </li>
+                  <li>
+                  Consumer Groups
+                  </li>
+                  <li>
+                  Industry Targeted Audience
+                  </li>
+                  <li>
+                  Internal Corporate Employees
+                  </li>
+                  <li>
+                  Charitable Organizations &amp; Events
+                  </li>
+                </ul>
+                </li>
+              </ul>
 
-		<!-- google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:600,300%7CPT+Sans+Narrow" rel="stylesheet" type="text/css">
+              <h3 class="salmon-text">SKILLS</h3>
+              <p>
+              Microsoft Word, Excel, PowerPoint, Outlook, OneNote, SharePoint,
+              <br>
+              Adobe Illustrator, InDesign, Photoshop, Acrobat X Pro,
+              <br>
+              Content Management Systems, Customer Relationship Systems, Press Distribution Services
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<link rel="stylesheet" href="./style.css" type="text/css">
+    {% include sidenav.html %}
 
-		<!-- jquery -->
-		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.js"></script>
+  </div>
+</div>
+    </div>
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$('.hitbox').click(function(e){
-					if(e.target.tagName !== 'A'){
-						//stop propagation of THIS event...
-						e.preventDefault();
-						e.stopPropagation();
-						//and trigger a click on the acutal a tag
-						$($(this).find('a')[0]).trigger('click');
-						return false;
-					}
-				});
-				$('.collapse[data-href]').each(function(idx,obj){
-					//preload everything
-					(function($obj){
-						if(/\.json$/.test($obj.attr('data-href'))){
-							$.getJSON($obj.attr('data-href')).done(function(data){
-								$obj.html(data.html);
-							}).fail(function(data){
-								$obj.html('');
-							});
-						} else if(/(\.htm$)|(\.html$)|(\.txt$)/.test($obj.attr('data-href'))){
-							$.get($obj.attr('data-href')).done(function(data){
-								$obj.html(data);
-							}).fail(function(data){
-								$obj.html('');
-							});
-						}
-					}($(obj)));
-				});
-				function fixLinks(){
-					$('a[data-href]').each(function(idx,obj){
-						$(obj).attr('href',$(obj).attr('data-href'));
-					});
-				}
-				$(document).ajaxComplete(fixLinks);
-			});
-		</script>
+    {% include footer.html %}
 
-		<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-51741056-1', 'stephaniecochard.com');
-		ga('send', 'pageview');
-		</script>
-
-	</head>
-	<body>
-		<div class="container">
-			<div class="container">
-				<div class="row">
-					<br>
-					<br>
-				</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="row">
-							<div class="col-sm-8">
-								<h1 class="copy-text black-text">
-									<a href="/">Stephanie Cochard</a> &nbsp;<span class="squares">&nbsp;</span>
-								</h1>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-4 col-sm-offset-2">
-								<h4 class="green-text heading-text move-up move-right">
-									WRITE. MARKET. DESIGN.
-								</h4>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-9 panel-group">
-						<div class="row">
-							<div class="col-sm-12">
-                                <div class="row">
-									<div class="black-text copy-text medium-text">
-                                        <p><strong>Creative marketing professional focused on applying excellent written and verbal skills to advance brand and marketing strategies for innovative companies through results-driven communications programs.</strong></p>
-                                        <h3 class="salmon-text">CORE STRENGTHS</h3>
-										<ul>
-											<li>
-											Produce and edit copy that excites call to action and translates industry-specific ideas into key messaging that speaks to a larger audience
-											</li>
-											<li>
-											Experienced in fast-paced, deadline-driven corporate environments, with a tendency to take initiative through self-started projects and lead by example
-											</li>
-											<li>
-											Demonstrated ability to develop and manage proactive communications programs that maximize brand awareness and increase market presence
-											</li>
-                      <li>
-                      Adept at recognizing how design and copy work together
-                      </li>
-                      <li>
-                      Able to quickly respond and adapt to feedback, edits, and changes of scope
-                      </li>
-                      <li>
-                      Skilled at contributing content for:
-                      <ul>
-                          <li>Websites</li>
-                          <li>Blogs</li>
-                          <li>Collateral</li>
-                          <li>Emails</li>
-                          <li>Brand &amp; Mission Statements</li>
-                          <li>Trade Shows</li>
-                          <li>Product UI/UX</li>
-                          <li>Social Media</li>
-                          <li>Press Releases</li>
-                          <li>Consumer Groups</li>
-                          <li>Industry Targeted Audience</li>
-                          <li>Internal Corporate Employees</li>
-                          <li>Charitable Organizations &amp; Events</li>
-                      </ul>
-                      </li>
-										</ul>
-                                      <h3 class="salmon-text">SKILLS</h3>
-                                        <p>
-                                        Microsoft Word, Excel, PowerPoint, Outlook, OneNote, SharePoint,
-                                        <br>
-                                        Adobe Illustrator, InDesign, Photoshop, Acrobat X Pro,
-                                        <br>
-                                        Content Management Systems, Customer Relationship Systems, Press Distribution Services
-                                        </p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="row">
-							<div class="col-sm-9 col-sm-offset-3 gray-box text-center">
-								<div class="row">
-									<h5 class="col-sm-12 copy-text">
-										<a href="./samples.html">SAMPLES</a>
-									</h5>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-9 col-sm-offset-3 gray-box text-center">
-								<div class="row">
-									<h5 class="col-sm-12 copy-text">
-										<a href="./skills.html">SKILLS</a>
-									</h5>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-9 col-sm-offset-3 gray-box text-center">
-								<div class="row">
-									<h5 class="col-sm-12 copy-text">
-										<a href="./contact.html">SAY HI</a>
-									</h5>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-9 col-sm-offset-3 gray-box text-center">
-								<div class="row">
-									<h5 class="col-sm-12 copy-text">
-										<a href="./surprise.html">SURPRISE</a>
-									</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="container">
-				<div class="footer row gray-box light">
-					<div class="col-sm-12 text-center heading-text smaller-text">
-						<small>Copyright &copy; 2013-2015</small>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+  </body>
 </html>
