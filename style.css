@@ -6,6 +6,11 @@
 [class^="col-"] {
 	line-height: 1.8em;
 }
+
+.img-grid * img {
+    width: 25rem;
+}
+
 .squares {
 	background: url("squares.png") no-repeat left center;
 	display: inline-block;
