@@ -10,6 +10,15 @@
 .img-grid * img {
     width: 25rem;
 }
+.img-grid * a {
+    color: #333;
+}
+.img-grid * .nohover {
+    text-decoration: none;
+}
+.img-grid * a:hover {
+    color: #333;
+}
 
 .squares {
 	background: url("squares.png") no-repeat left center;

@@ -17,26 +17,11 @@
                                         </div>
                                         <div class="col-sm-10">
                                             <ul>
+                                                {% for s in site.data.surprises %}
                                                 <li>
-                                                I'm a former Anteater. Go UC Irvine! Zot zot?
+                                                    {{ s }}
                                                 </li>
-                                                <li>
-                                                Will write for pizza. And Netflix.
-                                                </li>
-                                            </ul>
-                                            ---&gt; Yes, this is my good side. My jolly, good side.
-                                            <ul>
-                                                <li>
-                                                Is it sunny out? I'm playing Smashball on the beach. (And probably losing).
-                                                </li>
-                                                <li>
-                                                I enjoy sword fighting with pencils. Currently seeking opponents.
-                                                </li>
-                                                <li>
-                                                A shrimp's heart is in its head. Not about me, but still interesting.
-                                                </li>
-                                                <li>
-                                                I am co-creator of the health companion app <strong><a href="https://fitbeast.io" target="_blank">Fitbeast</a></strong> available on the <strong><a href="https://play.google.com/store/apps/details?id=io.fitbeast.android.app.FitbeastApplication" target="_blank">Google Play Store</a></strong>.
+                                                {% endfor %}
                                             </ul>
                                         </div>
 									</div>

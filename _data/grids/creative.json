@@ -1,0 +1,9 @@
+[
+    {"src":"./images/fitbeast-google-play.png","caption":"","href":"https://play.google.com/store/apps/details?id=io.fitbeast.android.app.FitbeastApplication"},
+    {"src":"./images/fitbeast-second-place.png","caption":""},
+    {"src":"./images/fitbeast-magestic-beasts.png","caption":""},
+    [
+        {"src":"./images/fitbeast-website.png","caption":"","href":"https://fitbeast.io"},
+        {"src":"./images/fitbeast-blog.png","caption":"","href":"https://blog.fitbeast.io"}
+    ]
+]

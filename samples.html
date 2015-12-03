@@ -7,32 +7,57 @@
                 <div class="row">
                     <div class="col-sm-9">
                         <div class="row">
-                            {% for section in site.data.headings %}
                             <div class="col-sm-12">
+                            {% for section in site.data.headings %}
                                 <div class="row medium-text">
                                     <h4>{{ section.heading }}</h4>
                                     <p>
                                     {{ section.text }}
                                     </p>
                                 </div>
-                            </div>
                             {% assign grid = site.data.grids[section.type] %}
+                            {% if section.width %}
+                                {% assign width = section.width %}
+                                {% assign num = 12 | divided_by:width %}
+                            {% else %}
+                                {% assign width = 4 %}
+                                {% assign num = 3 %}
+                            {% endif %}
                             {% if grid.size > 0 %}
                             <div class="row img-grid">
                                 {% for img in grid %}
-                                {% capture mod %}{{ forloop.index | modulo:3 }}{% endcapture %}
-                                <div class="col-sm-4">
+                                <div class="col-xs-{{ width }}">
+                                {% if img.first.src %}
+                                    <!-- there are multiple elements -->
+                                    {% for el in img %}
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            {% if el.href %}<a class="nohover" href="{{ el.href }}">{% endif %}
+                                            <img src="{{ el.src }}">
+                                            {% if el.href %}</a>{% endif %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                {% else %}
+                                {% assign mod = forloop.index | modulo: num %}
+                                    <!-- {{ mod }} -->
+                                    {% if img.href %}<a class="nohover" href="{{ img.href }}">{% endif %}
                                     <img src="{{ img.src }}">
+                                    {% if img.href %}</a>{% endif %}
                                     <br>
+                                    {% if img.href %}<a href="{{ img.href }}">{% endif %}
                                     {{ img.caption }}
+                                    {% if img.href %}</a>{% endif %}
+                                {% endif %}
                                 </div>
-                            {% if forloop.last %}</div>{% elsif mod == '0' %}</div>
+                            {% if forloop.last %}</div>{% elsif mod == 0 %}</div>
                             <div class="row img-grid">
                             {% endif %}
                             {% else %}
                                 {% endfor %}
                                 {% endif %}
-                                {% endfor %}
+                            {% endfor %}
+                            </div>
                         </div>
 
                     </div>
