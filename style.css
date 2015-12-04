@@ -7,6 +7,10 @@
 	line-height: 1.8em;
 }
 
+.padding-above {
+    padding-top: 1em;
+}
+
 .img-grid * img {
     width: 25rem;
 }
