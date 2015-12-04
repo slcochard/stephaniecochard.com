@@ -40,7 +40,6 @@
                                     {% endfor %}
                                 {% else %}
                                 {% assign mod = forloop.index | modulo: num %}
-                                    <!-- {{ mod }} -->
                                     {% if img.href %}<a class="nohover" href="{{ img.href }}">{% endif %}
                                     <img src="{{ img.src }}">
                                     {% if img.href %}</a>{% endif %}
