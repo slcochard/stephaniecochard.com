@@ -1,12 +1,15 @@
 [class*="-box"] {
-	font-size: x-large;
-	border-width: .5em 0px;
-	border-style: solid;
+    font-size: x-large;
+    border-width: .5em 0px;
+    border-style: solid;
 }
 [class^="col-"] {
-	line-height: 1.8em;
+    line-height: 1.8em;
 }
 
+.center {
+    text-align: center;
+}
 .padding-above {
     padding-top: 1em;
 }
@@ -36,91 +39,91 @@
 }
 
 .squares {
-	background: url("squares.png") no-repeat left center;
-	display: inline-block;
-	width: 100px;
+    background: url("squares.png") no-repeat left center;
+    display: inline-block;
+    width: 100px;
 }
 h1 {
-	margin-left:-15px;
-	font-size: 84px;
+    margin-left:-15px;
+    font-size: 84px;
 }
 h1.small-header {
-  font-size: 48px;
+    font-size: 48px;
 }
 h4 {
-	font-size: 32px;
+    font-size: 32px;
 }
 h4.small-header {
-  font-size: 16px;
+    font-size: 16px;
 }
 h5 {
-	font-size: x-large;
-	-webkit-margin-before: 0px;
-	-webkit-margin-after: 0px;
+    font-size: x-large;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
 }
 .white-text {
-  color: white;
+    color: white;
 }
 .copy-text {
-	font-family: 'Lora', sans-serif;
+    font-family: 'Lora', sans-serif;
 }
 .heading-text {
-	font-family: 'Lora', sans-serif;
+    font-family: 'Lora', sans-serif;
 }
 .footer-text {
-	font-family: 'Lora', sans-serif;
+    font-family: 'Lora', sans-serif;
 }
 .move-up {
-	margin-top: -10px;
-	margin-bottom: 25px;
+    margin-top: -10px;
+    margin-bottom: 25px;
 }
 .move-right {
-	margin-left: 40px;
+    margin-left: 40px;
 }
 .padding-left {
     padding-left: 25px;
 }
 .gray-box {
-	background-color: rgb(153, 153, 153);
-	border-color: rgb(153, 153, 153);
-	color: white;
+    background-color: rgb(153, 153, 153);
+    border-color: rgb(153, 153, 153);
+    color: white;
 }
 .lt-gray-box {
-	background-color: rgb(232,232,232);
-	border-color: rgb(232,232,232);
+    background-color: rgb(232,232,232);
+    border-color: rgb(232,232,232);
 }
 .black-text {
-	color: rgb(102, 102, 102);
+    color: rgb(102, 102, 102);
 }
 .gray-box.light {
-	background-color: rgb(192, 192, 192);
-	border-color: rgb(192, 192, 192);
+    background-color: rgb(192, 192, 192);
+    border-color: rgb(192, 192, 192);
 }
 .green-box {
-	background-color: rgb(147, 204, 130);
-	border-color: rgb(147, 204, 130);
-	color: white;
+    background-color: rgb(147, 204, 130);
+    border-color: rgb(147, 204, 130);
+    color: white;
 }
 .green-text {
-	color: rgb(43, 182, 115);
+    color: rgb(43, 182, 115);
 }
 .blue-box {
-	background-color: rgb(132, 195, 191);
-	border-color: rgb(132, 195, 191);
-	color: white;
+    background-color: rgb(132, 195, 191);
+    border-color: rgb(132, 195, 191);
+    color: white;
 }
 .salmon-box {
-	background-color: rgb(245, 132, 102);
-	border-color: rgb(245, 132, 102);
-	color: white;
+    background-color: rgb(245, 132, 102);
+    border-color: rgb(245, 132, 102);
+    color: white;
 }
 .salmon-text {
-	color: rgb(245, 132, 102);
+    color: rgb(245, 132, 102);
 }
 .orange-box {
-	background-color: rgb(251, 176, 63);
-	border-color: rgb(251, 176, 63);
-	color: white;
+    background-color: rgb(251, 176, 63);
+    border-color: rgb(251, 176, 63);
+    color: white;
 }
 .brown-box, .btn-brown {
     background-color: rgb(115, 75, 39);
@@ -135,19 +138,19 @@ h5 {
     margin-left:15px;
 }
 .container .row {
-	padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 .container .row .row .row {
-	padding-bottom: 0px;
+    padding-bottom: 0px;
 }
 .panel {
-	border: none;
+    border: none;
 }
 .panel-group {
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 .panel-group .panel {
-	overflow: visible;
+    overflow: visible;
 }
 .large-text {
     font-size: large;
@@ -162,50 +165,50 @@ h5 {
     margin-left: 4.16666%;
 }
 .medium-text {
-	font-size: medium;
+    font-size: medium;
 }
 .smaller-text {
-	font-size: small;
-	line-height: 3.3em;
+    font-size: small;
+    line-height: 3.3em;
 }
 .footer {
-	border-width: 0px;
+    border-width: 0px;
 }
 a, a:hover {
-	color: black;
+    color: black;
 }
 .hitbox:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 .black-text a, .black-text a:hover, .black-text * a, .black-text * a:hover {
-	color: rgb(102, 102, 102);
+    color: rgb(102, 102, 102);
 }
 ul {
-	margin-top: 1em;
+    margin-top: 1em;
 }
 ul li ul {
-	margin-top: 0px;
+    margin-top: 0px;
 }
 ul[class*="-list"] li {
-	list-style: none;
-	padding-left: 25px;
-	display: block;
-	font-size: small;
+    list-style: none;
+    padding-left: 25px;
+    display: block;
+    font-size: small;
 }
 .blue-list li {
-	background: url('blue-bullet.png') no-repeat left .5em;
+    background: url('blue-bullet.png') no-repeat left .5em;
 }
 .green-list li {
-	background: url('green-bullet.png') no-repeat left .5em;
+    background: url('green-bullet.png') no-repeat left .5em;
 }
 .salmon-list li {
-	background: url('salmon-bullet.png') no-repeat left .5em;
+    background: url('salmon-bullet.png') no-repeat left .5em;
 }
 .gray-list li {
-	background: url('gray-bullet.png') no-repeat left .5em;
+    background: url('gray-bullet.png') no-repeat left .5em;
 }
 .headline {
-	font-style: italic;
+    font-style: italic;
 }
 img.border {
     border:2px solid black;
