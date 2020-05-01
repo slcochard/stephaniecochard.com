@@ -90,7 +90,7 @@
             <div class="container-fluid">
               <div class="row img-grid">
                 {% for row in site.data.drive.print %}
-                <a href="{{row.link}}" target="_blank"><img src="{{row.thumb}}"></a>
+                <a href="{{row.link}}" target="_blank"><img src="{{row.localthumb}}"></a>
                 {% endfor %}
               </div>
             </div>
@@ -108,7 +108,7 @@
             <div class="container-fluid">
               <div class="row img-grid">
               {% for row in site.data.drive.storytelling %}
-                <a href="{{row.link}}" target="_blank"><img src="{{row.thumb}}"></a>
+                <a href="{{row.link}}" target="_blank"><img src="{{row.localthumb}}"></a>
               {% endfor %}
               </div>
             </div>
