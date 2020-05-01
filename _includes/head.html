@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
 		<!-- google fonts -->
-        	<link href="https://fonts.googleapis.com/css?family=Lora:600,300" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:600,300" rel="stylesheet" type="text/css">
 
 		<link rel="stylesheet" href="./style.css" type="text/css">
 
@@ -22,40 +22,7 @@
 		<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$('.hitbox').click(function(e){
-					if(e.target.tagName !== 'A'){
-						//stop propagation of THIS event...
-						e.preventDefault();
-						e.stopPropagation();
-						//and trigger a click on the acutal a tag
-						$($(this).find('a')[0]).trigger('click');
-						return false;
-					}
-				});
-				$('.collapse[data-href]').each(function(idx,obj){
-					//preload everything
-					(function($obj){
-						if(/\.json$/.test($obj.attr('data-href'))){
-							$.getJSON($obj.attr('data-href')).done(function(data){
-								$obj.html(data.html);
-							}).fail(function(data){
-								$obj.html('');
-							});
-						} else if(/(\.htm$)|(\.html$)|(\.txt$)/.test($obj.attr('data-href'))){
-							$.get($obj.attr('data-href')).done(function(data){
-								$obj.html(data);
-							}).fail(function(data){
-								$obj.html('');
-							});
-						}
-					}($(obj)));
-				});
-				function fixLinks(){
-					$('a[data-href]').each(function(idx,obj){
-						$(obj).attr('href',$(obj).attr('data-href'));
-					});
-				}
-				$(document).ajaxComplete(fixLinks);
+
 			});
 		</script>
 

@@ -16,33 +16,35 @@
 
                   <div class="row">
                     <div class="col-sm-12">
-                      <h1 class="copy-text gray-text center">
+                      <h1 class="copy-text gray-text space-below center">
                         <span itemprop="name">Stephanie Cochard</span>
                       </h1>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
-                      <h2 class="gray-text heading-text move-up center">
+                      <h2 class="gray-text heading-text space-below center">
                         <span itemprop="role">Copywriter</span>
                       </h2>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-12">
-                      <h3 class="gray-text heading-text move-up headline center">
-                        <span itemprop="role">Crafting impactful content across digital, print and e-commerce</span>
+                    <div class="col-sm-8 col-sm-offset-2">
+                      <h3 class="gray-text heading-text move-up headline space-below center">
+                        <span itemprop="role">Oh hi there! I’m a diverse freelance copywriter who is passionate about crafting impactful content to help brands grow. </span>
                       </h3>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
-                      <h4 class="gray-text heading-text move-up center">
-                        Contact<br>
+                      <h4 class="gray-text heading-text center">
+                        Let’s chat: <br>
+                      </h4>
+                      <p class="gray-text heading-text move-up space-below center">
                         <a href="tel:19498422212">949.842.2212</a><br>
                         <a href="mailto:slcochard@gmail.com">slcochard@gmail.com</a><br>
                         <a href="https://www.linkedin.com/in/stephaniecochard">Linkedin</a>
-                      </h4>
+                      </p>
                     </div>
                   </div>
 
@@ -66,7 +68,13 @@
               <h5 class="col-sm-8 col-sm-offset-1-2 heading-text large-text">
                 Emails, landing pages, blog articles, social media, radio
               </h5>
-              <iframe src="https://drive.google.com/embeddedfolderview?id=10Cq-N0f4qLN_xDssiem8pIjotY-UtTjo#grid" style="width:100%; height:600px; border:0;"></iframe>
+            </div>
+            <div class="container-fluid">
+              <div class="row img-grid">
+                {% for row in site.data.drive.digital %}
+                <a href="{{row.link}}" target="_blank"><img src="{{row.thumb}}"></a>
+                {% endfor %}
+              </div>
             </div>
           </div>
 
@@ -78,7 +86,13 @@
               <h5 class="col-sm-8 col-sm-offset-1-2 heading-text large-text">
                 Direct mailers, lookbooks, campaign collateral, window displays, newspaper ads
               </h5>
-              <iframe src="https://drive.google.com/embeddedfolderview?id=1XUZ5P18qaMqrjf5EZ1nN8XAM7p2oozPR#grid" style="width:100%; height:600px; border:0;"></iframe>
+            </div>
+            <div class="container-fluid">
+              <div class="row img-grid">
+                {% for row in site.data.drive.print %}
+                <a href="{{row.link}}" target="_blank"><img src="{{row.thumb}}"></a>
+                {% endfor %}
+              </div>
             </div>
           </div>
 
@@ -90,7 +104,13 @@
               <h5 class="col-sm-8 col-sm-offset-1-2 heading-text large-text">
                 Campaign summaries, style guides, brand content
               </h5>
-              <iframe src="https://drive.google.com/embeddedfolderview?id=1b42TrUmjMOdzfnizBE53hJmNrR-_Sfqk#grid" style="width:100%; height:600px; border:0;"></iframe>
+            </div>
+            <div class="container-fluid">
+              <div class="row img-grid">
+              {% for row in site.data.drive.storytelling %}
+                <a href="{{row.link}}" target="_blank"><img src="{{row.thumb}}"></a>
+              {% endfor %}
+              </div>
             </div>
           </div>
         </div>
